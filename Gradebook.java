@@ -20,22 +20,21 @@ public class Gradebook {
 
   /* return the size of the gradebook */
   public int size() {
-
-    return len;
+    throw new UnsupportedOperationException();
   }
 
   /* Adds a student to the gradebook */
-  public void addStudent(...) {
-
+  public void addStudent(/*...*/) {
+    throw new UnsupportedOperationException();
   }
 
   /* Adds an assinment to the gradebook */
-  public void addAssignment(...) {
+  public void addAssignment(/*...*/) {
 
   }
 
   /* Adds a grade to the gradebook */
-  public void addGrade(...) {
+  public void addGrade(/*...*/) {
 
   }
 
