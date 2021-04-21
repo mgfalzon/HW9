@@ -30,7 +30,7 @@ public class setup {
     /* add your code here */
 
     /* Exit if file invalid */ 
-    if (file_exists(args[1])) {
+    if (file_exists(args[1]) || !args[0].equals("-N")) {
       System.out.println("invalid");
       System.exit(255);
     }
@@ -39,7 +39,7 @@ public class setup {
     Gradebook gradebook = new Gradebook(args[1]);
 
     /* Create KeyGen and SecureRandom */ 
-    KeyGenerator keyGen = KeyGenerator.getInstance("DES");
+    KeyGenerator keyGen = KeyGenerator.getInstance("AES");
     SecureRandom sRandom = new SecureRandom();
 
     /* Initialize KeyGen and generate key */
@@ -47,6 +47,8 @@ public class setup {
     Key key = keyGen.generateKey();
 
     System.out.println("Key is: " + key);
+    System.out.println(args[0]);
+    System.out.println(args[1]);
     return;
   }
 }
